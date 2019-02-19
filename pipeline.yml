@@ -1,0 +1,15 @@
+---
+resources:
+- name: concourse-test
+  type: git
+  source:
+    uri: https://github.com/LiYa-Xu/concourse-test.git
+    branch: master
+
+jobs:
+- name: emial-test
+  public: true
+  plan:
+  - get: concourse-test
+  - task: emial-test
+    file: concourse-test/test.yml
