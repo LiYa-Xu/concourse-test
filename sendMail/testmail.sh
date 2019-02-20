@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
-#/usr/bin/debconf-set-selections
-apt-get update
-apt-get -y install debconf-utils
-apt-get install dialog apt-utils -y
-apt-get install -y vim
-echo "debconf1111" $debconf
-$debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
-$debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install mailutils
+sudo apt-get install sendmail  
+sudo apt-get install sendmail-cf
+sudo apt-get install mailutils  
 echo "test1111111111"
 mail 
 
