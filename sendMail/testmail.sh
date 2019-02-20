@@ -3,7 +3,9 @@
 apt-get update
 apt-get -y install debconf-utils
 echo "debconf1111" $debconf
-DEBIAN_FRONTEND=noninteractive apt-get -y install mailutils
+$debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
+$debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
+apt-get -y install mailutils
 echo "test1111111111"
 mail -h
 echo "test55555555555"
