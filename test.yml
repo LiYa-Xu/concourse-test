@@ -9,4 +9,4 @@ inputs:
   - name: concourse-test
 
 run:
-  path: concourse-test/sendMail/sendemail.py
+  path: concourse-test/testmail.sh
