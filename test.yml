@@ -9,4 +9,4 @@ inputs:
   - name: concourse-test
 
 run:
-  path: concourse-test/testmail.sh
+  path: concourse-test/sendMail/testmail.sh
