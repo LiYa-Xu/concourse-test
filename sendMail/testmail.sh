@@ -2,7 +2,7 @@
 #/usr/bin/debconf-set-selections
 apt-get update
 apt-get -y install debconf-utils
-apt-get install dialog apt-utils
+apt-get install dialog apt-utils -y
 echo "debconf" $debconf
 $debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 $debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
