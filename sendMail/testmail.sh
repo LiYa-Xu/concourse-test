@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#/usr/bin/debconf-set-selections
 apt-get update
 apt-get -y install debconf-utils
 $debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
