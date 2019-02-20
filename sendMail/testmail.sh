@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 apt-get update
 apt-get upgrade
-apt-get install sendmail  
-apt-get install sendmail-cf
-apt-get install mailutils  
+apt-get -y install sendmail  
+apt-get -y install sendmail-cf
+apt-get -y install mailutils  
 echo "test1111111111"
 mail 
 
