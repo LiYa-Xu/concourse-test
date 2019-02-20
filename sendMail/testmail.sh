@@ -2,7 +2,8 @@
 #/usr/bin/debconf-set-selections
 apt-get update
 apt-get -y install debconf-utils
-find / -name Dockerfile
-echo "test"
-ENV DEBIAN_FRONTEND=noninteractive
-echo "test111111"
+echo "debconf" $debconf
+$debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
+$debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
+apt-get -y install mailutils
+echo "Email Content:This is the content of mail. Welcome to ouyangpeng's blog : http://blog.csdn.net/ouyang_peng/" | mail -s "Email Subject : Hello from Linux Server by shell" xuliya@cn.ibm.com
