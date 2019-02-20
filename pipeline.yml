@@ -7,9 +7,9 @@ resources:
     branch: master
 
 jobs:
-- name: emial-test
+- name: email-test
   public: true
   plan:
   - get: concourse-test
-  - task: emial-test
+  - task: email-test
     file: concourse-test/test.yml
