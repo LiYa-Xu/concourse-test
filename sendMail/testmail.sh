@@ -7,7 +7,7 @@ apt-get install -y vim
 echo "debconf1111" $debconf
 $debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 $debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
-DEBIAN_FRONTEND=noninteractive apt-get -y install mailutils
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install mailutils
 echo "test1111111111"
 mail 
 
