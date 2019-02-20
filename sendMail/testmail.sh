@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 apt-get update
-apt-get upgrade
+apt-get -y upgrade
 apt-get -y install sendmail  
 apt-get -y install sendmail-cf
 apt-get -y install mailutils  
