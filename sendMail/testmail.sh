@@ -3,7 +3,7 @@ apt-get update
 apt-get -y install debconf-utils
 apt-get -y install ssmtp
 apt-get -y install postfix
-apt-get -y instal	l vim
+apt-get -y install vim
 debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
 apt-get -y install mailutils
